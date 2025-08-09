@@ -7,12 +7,14 @@ let pdfDoc = null,
     pageRendering = false,
     pageNumPending = null,
     pageNum = 1, 
+    url = '/Bitacora3.pdf',
     ctx = canvas.getContext('2d');
 
 let contPage = 2;    
+
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
-pdfjsLib.getDocument('./src/Bitacora3.pdf').promise.then(pdf => {
+pdfjsLib.getDocument(url).promise.then(pdf => {
   pdfDoc = pdf;
   renderPage(pageNum);
 });
