@@ -12,7 +12,7 @@ let pdfDoc = null,
 let contPage = 2;
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
-pdfjsLib.getDocument("Bitacora3.pdf").promise.then((pdf) => {
+pdfjsLib.getDocument('Bitacora3.pdf').promise.then((pdf) => {
   pdfDoc = pdf;
   renderPage(pageNum);
 });
